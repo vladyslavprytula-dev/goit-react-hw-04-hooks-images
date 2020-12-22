@@ -8,6 +8,7 @@ import MainLoader from './MainLoader/MainLoader';
 import Modal from './Modal/Modal';
 import Error from './Error/Error';
 import picturesApi from '../services/pictures-api';
+
 export default function App() {
   const [pictures, setPictures] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);

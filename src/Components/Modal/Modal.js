@@ -6,14 +6,6 @@ import defaultImag from './no_icon.png';
 
 const modalRoot = document.querySelector('#modal-root');
 export default function Modal({ largeImgUrl, alternative, onClose }) {
-  Modal.defaultProps = {
-    largeImgUrl: defaultImag,
-  };
-  Modal.propTypes = {
-    largeImgUrl: PropTypes.string,
-    alternative: PropTypes.string.isRequired,
-    onClose: PropTypes.func.isRequired,
-  };
   useEffect(() => {
     window.addEventListener('keydown', handelKeyDown);
     return function cleanup() {
@@ -42,3 +34,11 @@ export default function Modal({ largeImgUrl, alternative, onClose }) {
     modalRoot,
   );
 }
+Modal.defaultProps = {
+  largeImgUrl: defaultImag,
+};
+Modal.propTypes = {
+  largeImgUrl: PropTypes.string,
+  alternative: PropTypes.string.isRequired,
+  onClose: PropTypes.func.isRequired,
+};
